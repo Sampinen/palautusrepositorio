@@ -1,8 +1,8 @@
 from statistics_service import StatisticsService
-
-
-def main():
-    stats = StatisticsService()
+from player_reader import PlayerReader
+from urllib import request
+def main(link):
+    stats = StatisticsService(link)
     philadelphia_flyers_players = stats.team("PHI")
     top_scorers = stats.top(10)
 
@@ -16,4 +16,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main("https://studies.cs.helsinki.fi/nhlstats/2022-23/players.txt")
