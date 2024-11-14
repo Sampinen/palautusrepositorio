@@ -1,6 +1,12 @@
 import requests
+from rich.console import Console
+from rich.table import Table
 
+console = Console()
 class Player:
+    player_table = Table(show_header=True, header_style="bold magenta")
+    player_table.add_column("Name")
+    player_table.add_column("Team")
     def __init__(self, dict1,nationality):
         self.players = []
         for player in dict1:
@@ -8,6 +14,7 @@ class Player:
                 sum1 = str(player["goals"] + player["assists"])
                 self.players.append(f"{player["name"]}    {player["team"]}  {player["goals"]} + {player["assists"]} = {sum1}") 
         self.nationality = nationality
+
 
     def playerlist(self):
 
