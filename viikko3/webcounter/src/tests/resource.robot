@@ -5,7 +5,7 @@ Library  SeleniumLibrary
 ${SERVER}    localhost:5001
 ${DELAY}     0.5 seconds
 ${HOME_URL}  http://${SERVER}
-${BROWSER}   chrome
+${BROWSER}   firefox
 ${HEADLESS}  false
 
 *** Keywords ***
